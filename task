@@ -1,0 +1,34 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+Continents=[ "australia","asia","europe","africa","namerica","samerica","antartica"]
+categories=["total","male","female"]
+
+plt.figure(figsize=(10,7))
+info = ["total","male","female"]
+asia = [4800,2490,2370]
+australia = [46,13.94,14.06]
+europe = [753, 363,390]
+namerica = [627,309.7,314.4]
+samerica = [458.4,232,226]
+africa = [1500,778,779]
+antratica = [3000,2000,1000]
+x = np.arange(len(info))
+
+plt.bar(x-0.3,asia,width=.15,color="red",label="ASIA")
+plt.bar(x-0.2,australia,width=.1 ,color="blue",label="AUSTRALIA")
+plt.bar(x-0.1, europe , width=.1,color="green",label="EUROPE")
+plt.bar(x,namerica,width=.1,color="brown",label="N AMERICA")
+plt.bar(x+0.1,samerica,width=.1,color="orange",label="S AMERICA ")
+plt.bar(x+0.2,africa,width=.1,color="purple",label="AFRICA")
+plt.bar(x+0.3,antratica,width=.1,color="pink",label="ANTRATICA")
+plt.xticks(x,info)
+plt.xlabel("catergories")
+plt.ylabel("population")
+plt.title("Population of world in basis of gendrers")
+plt.legend()
+plt.show()
+
+
